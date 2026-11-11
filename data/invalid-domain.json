@@ -1,0 +1,96 @@
+{
+  "development": [
+    {
+      "subject_id": "d0",
+      "score": 0.1,
+      "label": 0,
+      "group": "A",
+      "weight": "1"
+    },
+    {
+      "subject_id": "d1",
+      "score": 0.2,
+      "label": 1,
+      "group": "A",
+      "weight": "1"
+    },
+    {
+      "subject_id": "d2",
+      "score": 0.5,
+      "label": 1,
+      "group": "A",
+      "weight": "2"
+    },
+    {
+      "subject_id": "d3",
+      "score": 0.5,
+      "label": 0,
+      "group": "B",
+      "weight": "1"
+    },
+    {
+      "subject_id": "d4",
+      "score": 0.8,
+      "label": 1,
+      "group": "B",
+      "weight": "1"
+    },
+    {
+      "subject_id": "d5",
+      "score": 0.9,
+      "label": 0,
+      "group": "B",
+      "weight": "1"
+    }
+  ],
+  "holdout": [
+    {
+      "subject_id": "d0",
+      "score": 0.1,
+      "label": 1,
+      "group": "A",
+      "weight": "1"
+    },
+    {
+      "subject_id": "h1",
+      "score": 0.5,
+      "label": 0,
+      "group": "A",
+      "weight": "1"
+    },
+    {
+      "subject_id": "h2",
+      "score": 0.8,
+      "label": 1,
+      "group": "B",
+      "weight": "1"
+    },
+    {
+      "subject_id": "h3",
+      "score": 0.8,
+      "label": 0,
+      "group": "B",
+      "weight": "1"
+    }
+  ],
+  "thresholds": [
+    "-inf",
+    "0.2",
+    "0.5",
+    "0.8",
+    "+inf"
+  ],
+  "risk_limits": {
+    "A": {
+      "fn": "1/3",
+      "fp": "1/2"
+    },
+    "B": {
+      "fn": "0",
+      "fp": "1/2"
+    }
+  },
+  "review_capacity": "4",
+  "false_negative_cost": "3",
+  "false_positive_cost": "1"
+}
