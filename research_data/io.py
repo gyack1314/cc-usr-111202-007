@@ -34,8 +34,8 @@ def rational(x):
     try:return Fraction(x)
     except (ValueError,ZeroDivisionError):raise ValueError('无效有理数') from None
 
-def load(path):
+def load(path,parse_float=None):
     raw=Path(path).read_bytes()
-    value=json.loads(raw.decode('utf8'),parse_constant=lambda x:(_ for _ in ()).throw(ValueError('不接受非有限JSON常量')))
+    value=json.loads(raw.decode('utf8'),parse_constant=lambda x:(_ for _ in ()).throw(ValueError('不接受非有限JSON常量')),parse_float=parse_float)
     if not isinstance(value,dict):raise ValueError('顶层需要对象')
     return value,hashlib.sha256(raw).hexdigest()
